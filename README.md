@@ -1,39 +1,101 @@
 # NLP Lab 04 - Bag of Words & Cosine Similarity
 
-This repository contains my work for **NLP Lab 04**. In this lab, I worked with **Bag of Words (BoW)** and **Cosine Similarity** to represent text as numerical vectors and compare documents.
+This repository contains the work for **NLP Lab 04**.  
+The lab covers **Bag of Words (BoW)** and **Cosine Similarity** for representing and comparing text documents.
 
 ## Student Information
 
-- **Name:** Fatima Channa
-- **Roll Number:** 2K24/Ai/25
+- **Name:** Eshaal Najia
+- **Roll Number:** 2K24/Ai/23
 - **Course:** Natural Language Processing
 - **University:** University of Sindh, Jamshoro
 
 ---
 
-## Task 1 - Bag of Words Matrix Construction
+## Task 1: Bag of Words
 
-In Task 1, I used three customer reviews to create a **Bag of Words matrix**.
+In Task 1, three customer reviews were converted into numerical form using the **Bag of Words** technique.
 
-I used `CountVectorizer` from Scikit-learn with English stop words removed. The program extracts the vocabulary from the reviews and converts the words into numerical values based on their frequency.
+### Method Used
 
-The resulting matrix shows the occurrence of each word in the three reviews.
+- Created a corpus of customer reviews.
+- Used `CountVectorizer` from Scikit-learn.
+- Removed English stop words.
+- Generated the vocabulary.
+- Created a word-frequency matrix.
 
-### Task 1 Output
+### Output
+<img width="688" height="110" alt="task1_output" src="https://github.com/user-attachments/assets/0fab11a2-c856-4ea3-b178-9d2043253f6c" />
 
-![Task 1 Output](task1_output.png)
 
 ---
 
-## Task 2 - Document Search Engine & Relevance Ranking
+## Task 2: Cosine Similarity
 
-In Task 2, I created a simple document search engine using **Bag of Words** and **Cosine Similarity**.
+In Task 2, a simple document search system was created using **Bag of Words** and **Cosine Similarity**.
 
-The documents and search query are converted into numerical vectors using `CountVectorizer`. Cosine Similarity is then used to compare the query with each document.
+### Method Used
 
-The documents are ranked from the highest similarity score to the lowest similarity score.
+- Created four documents.
+- Created a search query.
+- Converted documents and query into numerical vectors.
+- Calculated cosine similarity.
+- Ranked documents from highest to lowest similarity.
 
-The query used was:
+### Query
 
-```text
-machine learning algorithms for data
+`machine learning algorithms for data`
+
+### Output
+
+<img width="708" height="210" alt="task2_output" src="https://github.com/user-attachments/assets/900b528b-ffe3-4b43-af40-c5fc5375ab45" />
+
+---
+
+## Viva Questions
+
+### 1. Why does Bag of Words ignore word order?
+
+Bag of Words only counts the occurrence of words. It does not consider the order of words.
+
+For example:
+
+- `Dog bites man`
+- `Man bites dog`
+
+can have the same Bag of Words representation even though their meanings are different.
+
+### 2. What is sparsity?
+
+Sparsity occurs when a large vocabulary is used but each document contains only a few of those words. As a result, the matrix contains many zero values.
+
+For example, a vocabulary of 100,000 words can create a large matrix with many zeros.
+
+### 3. Why can cosine similarity be zero?
+
+Cosine similarity can be zero when the query and a document have no common words. Their vectors have no overlapping non-zero values.
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- CountVectorizer
+- Cosine Similarity
+
+---
+
+## Files
+
+- `Task_1_solution.py` - Task 1 solution
+- `Task2_solution.py` - Task 2 solution
+- `README.md` - Project documentation
+
+---
+
+## Conclusion
+
+This lab helped in understanding how **Bag of Words** represents text numerically and how **Cosine Similarity** can be used to compare documents and rank them according to their similarity.
