@@ -5,8 +5,8 @@ The lab covers **Bag of Words (BoW)** and **Cosine Similarity** for representing
 
 ## Student Information
 
-- **Name:** Eshaal Najia
-- **Roll Number:** 2K24/Ai/23
+- **Name:** Fatima Channa
+- **Roll Number:** 2K24/Ai/25
 - **Course:** Natural Language Processing
 - **University:** University of Sindh, Jamshoro
 
